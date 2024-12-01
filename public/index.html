@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Asset Management Tool</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>IT Asset Management Tool</h1>
+        <nav>
+            <button id="add-employee-btn">Add Employee</button>
+        </nav>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-employee-id" placeholder="Search by Employee ID...">
+            <input type="text" id="search-employee-name" placeholder="Search by Name...">
+            <!-- <input type="email" id="search-employee-email" placeholder="Search by Email..."> -->
+            <button id="search-btn">Search</button>
+        </div>
+        
+        <table id="employee-table">
+            <thead>
+                <tr>
+                    <th>Employee Code</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact Number</th>
+                    <th>Office Location</th>
+                    <th>Assets</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Employee rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </main>
+
+    <div id="add-employee-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-add-employee-modal">&times;</span>
+            <h2>Add Employee</h2>
+            <form id="add-employee-form">
+                <input type="text" id="employee-id" placeholder="Employee ID" required>
+                <input type="text" id="employee-name" placeholder="Name" required>
+                <input type="email" id="employee-email" placeholder="Email" required>
+                <input type="text" id="employee-contact-number" placeholder="Contact Number" required>
+                <input type="text" id="employee-office-location" placeholder="Office Location" required>
+                <button type="submit">Add Employee</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="edit-employee-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-edit-employee-modal">&times;</span>
+            <h2>Edit Employee</h2>
+            <form id="edit-employee-form">
+                <input type="text" id="edit-employee-id" placeholder="Employee ID" readonly required>
+                <input type="text" id="edit-employee-name" placeholder="Name" required>
+                <input type="email" id="edit-employee-email" placeholder="Email" required>
+                <input type="text" id="edit-employee-contact-number" placeholder="Contact Number" required>
+                <input type="text" id="edit-employee-office-location" placeholder="Office Location" required>
+                <button type="submit">Update Employee</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- View Assets Modal -->
+    <div id="view-assets-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-view-assets-modal">&times;</span>
+            <h2>Assets for Employee</h2>
+            <table id="assets-table">
+                <thead>
+                    <tr>
+                        <th>Asset Name</th>
+                        <th>Asset Type</th>
+                        <th>Serial Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Asset rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+            <button id="add-asset-btn">Add Asset</button>
+        </div>
+    </div>
+
+    <!-- Add Asset Modal -->
+    <div id="add-asset-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-add-asset-modal">&times;</span>
+            <h2>Add Asset</h2>
+            <form id="add-asset-form">
+                <input type="text" id="asset-name" class="modal-input" placeholder="Asset Name" required>
+                <input type="text" id="asset-type" class="modal-input" placeholder="Asset Type" required>
+                <input type="text" id="serial-number" class="modal-input" placeholder="Serial Number" required>
+                <button type="submit" class="modal-button">Add Asset</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Asset Modal -->
+    <div id="edit-asset-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-edit-asset-modal">&times;</span>
+            <h2>Edit Asset</h2>
+            <form id="edit-asset-form">
+                <label for="edit-asset-name">Asset Name<label>
+                <input type="text" id="edit-asset-name" class="modal-input" placeholder="Asset Name" required>
+                <label for="edit-asset-type">Asset Type</label>
+                <input type="text" id="edit-asset-type" class="modal-input" placeholder="Asset Type" required>
+                <label for="edit-serial-number">Serial No</label>
+                <input type="text" id="edit-serial-number" class="modal-input" placeholder="Serial Number" required>
+                <button type="submit" class="modal-button">Update Asset</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+    <p>Created by Adarsh © Broadridge</p>
+</footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
